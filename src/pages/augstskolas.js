@@ -9,6 +9,7 @@ export const universities = [
       students: "20k",
       acceptance: "30%",
       satisfaction: "85%",
+      website: "https://www.lu.lv/"
     },
     {
       name: "Rīgas Tehniskā universitāte",
@@ -20,6 +21,7 @@ export const universities = [
       students: "15k",
       acceptance: "25%",
       satisfaction: "88%",
+      website: "https://www.rtu.lv/"
     },
     {
       name: "Rīgas Stradiņa universitāte",
@@ -31,6 +33,7 @@ export const universities = [
       students: "10k",
       acceptance: "20%",
       satisfaction: "90%",
+      website: "https://www.rsu.lv/"
     },
     {
       name: "Daugavpils Universitāte",
@@ -42,6 +45,7 @@ export const universities = [
       students: "8k",
       acceptance: "35%",
       satisfaction: "80%",
+      website: "https://du.lv/"
     },
     {
       name: "Liepājas Universitāte",
@@ -53,6 +57,7 @@ export const universities = [
       students: "5k",
       acceptance: "40%",
       satisfaction: "82%",
+      website: "https://www.rtu.lv/lv/liepaja"
     },
     {
       name: "Vidzemes Augstskola",
@@ -64,6 +69,7 @@ export const universities = [
       students: "3k",
       acceptance: "45%",
       satisfaction: "78%",
+      website: "https://va.lv/"
     },
     {
       name: "Ventspils Augstskola",
@@ -75,6 +81,7 @@ export const universities = [
       students: "2.5k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.venta.lv/"
     },
     {
       name: "Rēzeknes Tehnoloģiju akadēmija",
@@ -86,6 +93,7 @@ export const universities = [
       students: "4k",
       acceptance: "38%",
       satisfaction: "83%",
+      website: "https://rta.lv/"
     },
     {
       name: "Banku Augstskola",
@@ -97,6 +105,7 @@ export const universities = [
       students: "2k",
       acceptance: "60%",
       satisfaction: "75%",
+      website: "https://www.ba.lv/lv/"
     },
     {
       name: "Biznesa augstskola Turība",
@@ -108,6 +117,7 @@ export const universities = [
       students: "3k",
       acceptance: "55%",
       satisfaction: "77%",
+      website: "https://www.turiba.lv/lv"
     },
     {
       name: "Latvijas Lauksaimniecības universitāte",
@@ -119,6 +129,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.lbtu.lv/lv"
     },
     {
       name: "Rīgas Ekonomikas augstskola",
@@ -130,6 +141,7 @@ export const universities = [
       students: "1.5k",
       acceptance: "20%",
       satisfaction: "90%",
+      website: "https://www.sseriga.edu/"
     },
     {
       name: "Jāzepa Vītola Latvijas Mūzikas akadēmija",
@@ -141,6 +153,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.jvlma.lv/lv"
     },
     {
       name: "Latvijas Kūltūras akadēmija",
@@ -152,6 +165,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.lka.edu.lv/lv/"
     },
     {
       name: "Latvijas Mākslas akadēmija",
@@ -163,6 +177,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.lma.lv/lv"
     },
     {
       name: "Latvijas Jūras akadēmija",
@@ -174,6 +189,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.rtu.lv/lv/lja"
     },
     {
       name: "Latvijas Nacionālā aizsardzības akadēmija",
@@ -185,6 +201,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.naa.mil.lv/lv"
     },
     {
       name: "Latvijas Sporta pedagoģijas akadēmija",
@@ -196,6 +213,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.rsu.lv/rsu-lspa"
     },
     {
       name: "Rēzeknes Augstskola",
@@ -207,6 +225,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://rta.lv/"
     },
     {
       name: "Baltijas Starptautiskā akadēmija",
@@ -218,6 +237,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://bsa.edu.lv/index.php/lv/"
     },
     {
       name: "Latvijas Kristīgā akadēmija",
@@ -229,6 +249,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://kra.lv/"
     },
     {
       name: "Lutera Akadēmija",
@@ -240,6 +261,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.luteraakademija.lv/"
     },
     {
       name: "Ekonomikas un kultūras augstskola",
@@ -251,6 +273,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.augstskola.lv/#gsc.tab=0"
     },
     {
       name: "Informācijas sistēmu menedžmenta augstskola",
@@ -262,6 +285,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://isma.lv/"
     },
     {
       name: "Baltijas Psiholoģijas un menedžmenta augstskola",
@@ -273,6 +297,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://bsa.edu.lv/index.php/lv/"
     },
     {
       name: "Rīgas Starptautiskā ekonomikas un biznesa administrācijas augstskola",
@@ -284,6 +309,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://riseba.lv/"
     },
     {
       name: "Rīgas Juridiskā augstskola",
@@ -295,6 +321,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.rgsl.edu.lv/lv"
     },
     {
       name: "Transporta un sakaru institūts",
@@ -306,6 +333,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://tsi.lv/lv/"
     },
     {
       name: "Rīgas Aeronavigācijas institūts",
@@ -317,6 +345,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.rai.lv/"
     },
     {
       name: "Biznesa vadības koledža",
@@ -328,6 +357,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://www.bvk.lv/"
     },
     {
       name: "Kosmetoloģijas koledža",
@@ -339,6 +369,7 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://skk.lv/"
     },
     {
       name: "Latvijas Biznesa koledža",
@@ -350,5 +381,6 @@ export const universities = [
       students: "7k",
       acceptance: "50%",
       satisfaction: "80%",
+      website: "https://biznesakoledza.lv/"
     },
   ];
