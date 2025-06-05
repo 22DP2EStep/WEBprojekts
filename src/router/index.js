@@ -20,11 +20,6 @@ const router = createRouter({
             component: () => import('../pages/aboutPage.vue')
         },
         {
-            path:'/contact',
-            name: 'contact',
-            component: () => import('../pages/contactPage.vue')
-        },
-        {
             path:'/compare',
             name: 'universitates',
             component: () => import('../pages/UniversityCompare.vue')
@@ -38,7 +33,7 @@ const router = createRouter({
             path: '/Terms',
             name: 'Terms',
             component: () => import('../pages/Terms.vue')
-        }
+        },
 
     ]
 })

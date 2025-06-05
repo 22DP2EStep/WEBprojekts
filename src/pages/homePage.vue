@@ -1,28 +1,47 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import { universities } from "./augstskolas";
 
 const searchQuery = ref("");
-console.log(universities);
+const universities = ref([]);
+const errorMsg = ref("");
+const isDarkMode = ref(false);
+
+// Normalize URL to include protocol if missing
+function normalizeUrl(url) {
+  if (!url) return "#";
+  return url.startsWith("http://") || url.startsWith("https://")
+    ? url
+    : `https://${url}`;
+}
+
+onMounted(async () => {
+  try {
+    const res = await fetch("http://localhost/universities/universities.php");
+    if (!res.ok) throw new Error("Failed to fetch universities");
+    universities.value = await res.json();
+  } catch (error) {
+    console.error(error);
+    errorMsg.value = "Failed to load universities.";
+  }
+});
 
 const filteredUniversities = computed(() => {
   const query = searchQuery.value.toLowerCase();
-  if (!query) return universities;
+  if (!query) return universities.value;
 
-  return universities.filter(
+  return universities.value.filter(
     (uni) =>
       uni.name.toLowerCase().includes(query) ||
       uni.location.toLowerCase().includes(query)
   );
 });
-
 </script>
 
 <template>
   <div class="container" :class="{ 'dark-mode': isDarkMode }">
     <header>
       <h1>UniSalīdzināt</h1>
-      <p class="tagline">Atrod Savu Ideālo Universitāti</p>
+      <p class="tagline">Atrodi savu ideālo augstskolu</p>
 
       <div class="search-section">
         <input
@@ -36,12 +55,15 @@ const filteredUniversities = computed(() => {
 
     <main>
       <section class="featured-universities">
-        <h2>Populārākās Universitātes</h2>
+        <div>
+          <h2>Populārākās Universitātes</h2>
+        </div>
+        <div v-if="errorMsg" class="error-message">{{ errorMsg }}</div>
 
-        <div class="university-grid">
+        <div class="university-grid" v-else>
           <div
             v-for="uni in filteredUniversities"
-            :key="uni.name"
+            :key="uni.id"
             class="university-card"
           >
             <img :src="uni.image" :alt="uni.name" />
@@ -49,11 +71,17 @@ const filteredUniversities = computed(() => {
             <p class="location">{{ uni.location }}</p>
             <p class="ranking">Pasaules Reitings: {{ uni.ranking }}</p>
             <p class="tuition">Mācību maksa: {{ uni.tuition }}</p>
-            <button class="compare-btn">Salīdzināt</button>
-            
-            <!-- Both buttons share the same style now -->
-            <a :href="uni.website" target="_blank">
-              <button class="compare-btn">Apmeklēt mājaslapu</button>
+
+            <router-link to="/compare" class="compare-btn">Salīdzināt</router-link>
+
+            <!-- Normalized website link styled as button -->
+            <a
+              :href="normalizeUrl(uni.website)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="compare-btn"
+            >
+              Apmeklēt mājaslapu
             </a>
           </div>
         </div>
@@ -63,8 +91,6 @@ const filteredUniversities = computed(() => {
 </template>
 
 <style>
-
-/* Add CSS variables for theming */
 :root {
   --bg-color: #ffffff;
   --text-color: #2c3e50;
@@ -81,11 +107,10 @@ const filteredUniversities = computed(() => {
   --nav-bg: rgba(0, 0, 0, 0.9);
 }
 
-body{background-color: var(--bg-color)}
+body {
+  background-color: var(--bg-color);
+}
 
-</style>
-
-<style scoped>
 .container {
   width: 100%;
   margin: 0 auto;
@@ -186,7 +211,6 @@ h1 {
   font-size: 1.1em;
 }
 
-/* Both buttons now use the same class for styling */
 .compare-btn {
   margin: 20px;
   padding: 12px 30px;
@@ -210,7 +234,7 @@ h1 {
 }
 
 h2 {
-  color: #2c3e50;
+  color: var(--text-color);
   margin-bottom: 30px;
   font-size: 2.2em;
   text-align: center;

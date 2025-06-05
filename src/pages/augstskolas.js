@@ -1,4 +1,4 @@
-export const universities = [
+export const universities1 = [
     {
       name: "Latvijas Universitāte",
       location: "Rīga, Latvija",
