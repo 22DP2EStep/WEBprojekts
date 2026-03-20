@@ -18,26 +18,17 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useTheme } from "../composables/useTheme";
 
 const isNavOpen = ref(false);
-const isDarkMode = ref(false);
+const { isDarkMode, toggleTheme, initTheme } = useTheme();
 
 const toggleNav = () => {
   isNavOpen.value = !isNavOpen.value;
 };
 
-const toggleTheme = () => {
-  isDarkMode.value = !isDarkMode.value;
-  document.documentElement.setAttribute(
-    "data-theme",
-    isDarkMode.value ? "dark" : "light"
-  );
-};
-
 onMounted(() => {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  isDarkMode.value = prefersDark;
-  document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+  initTheme();
 });
 </script>
 

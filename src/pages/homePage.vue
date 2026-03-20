@@ -4,7 +4,6 @@ import { ref, computed, onMounted } from "vue";
 const searchQuery = ref("");
 const universities = ref([]);
 const errorMsg = ref("");
-const isDarkMode = ref(false);
 
 // Normalize URL to include protocol if missing
 function normalizeUrl(url) {
@@ -38,7 +37,7 @@ const filteredUniversities = computed(() => {
 </script>
 
 <template>
-  <div class="container" :class="{ 'dark-mode': isDarkMode }">
+  <div class="container">
     <header>
       <h1>UniSalīdzināt</h1>
       <p class="tagline">Atrodi savu ideālo augstskolu</p>
