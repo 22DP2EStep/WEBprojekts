@@ -84,7 +84,7 @@
 }
 
 .footer-section a:hover {
-  color: #3498db;
+  color: #111111;
 }
 
 .social-icon {
@@ -111,7 +111,7 @@
 }
 
 .social-links a:hover .social-icon {
-  fill: #3498db;
+  fill: #111111;
 }
 
 .newsletter-form {
@@ -131,16 +131,16 @@
 
 .newsletter-form button {
   padding: 10px 20px;
-  background: linear-gradient(to right, #3498db, #2980b9);
+  background: linear-gradient(to right, #111111, #1a1a1a);
   color: white;
-  border: none;
+  border: 1px solid #2b2b2b;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .newsletter-form button:hover {
-  background: linear-gradient(to right, #2980b9, #1a5276);
+  background: linear-gradient(to right, #000000, #151515);
   transform: translateY(-2px);
 }
 

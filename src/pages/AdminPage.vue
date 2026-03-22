@@ -94,14 +94,14 @@ button {
   padding: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #151515;
   color: white;
-  border: none;
+  border: 1px solid #2b2b2b;
   border-radius: 4px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
 }
 
 .error {
@@ -114,10 +114,10 @@ button:hover {
 }
 
 .dashboard-btn {
-  background-color: #28a745;
+  background-color: #1f1f1f;
 }
 
 .dashboard-btn:hover {
-  background-color: #218838;
+  background-color: #000000;
 }
 </style>
