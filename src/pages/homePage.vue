@@ -71,17 +71,18 @@ const filteredUniversities = computed(() => {
             <p class="ranking">Pasaules Reitings: {{ uni.ranking }}</p>
             <p class="tuition">Mācību maksa: {{ uni.tuition }}</p>
 
-            <router-link to="/compare" class="compare-btn">Salīdzināt</router-link>
+            <div class="card-actions">
+              <router-link to="/compare" class="compare-btn">Salīdzināt</router-link>
 
-            <!-- Normalized website link styled as button -->
-            <a
-              :href="normalizeUrl(uni.website)"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="compare-btn"
-            >
-              Apmeklēt mājaslapu
-            </a>
+              <a
+                :href="normalizeUrl(uni.website)"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="compare-btn website-btn"
+              >
+                Apmeklēt mājaslapu
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -177,6 +178,8 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 4px 20px var(--card-shadow);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s ease;
 }
 
@@ -210,26 +213,45 @@ h1 {
   font-size: 1.1em;
 }
 
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  padding: 18px 20px 22px;
+}
+
 .compare-btn {
-  margin: 20px;
-  padding: 12px 30px;
-  background: linear-gradient(to right, #3498db, #2980b9);
+  flex: 1;
+  padding: 12px 16px;
+  background: linear-gradient(to right, #111111, #1a1a1a);
   color: white;
-  border: none;
+  border: 1px solid #2a2a2a;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
+.website-btn {
+  background: linear-gradient(to right, #1b1b1b, #262626);
+}
+
 .compare-btn:hover {
-  background: linear-gradient(to right, #2980b9, #1a5276);
+  background: linear-gradient(to right, #000000, #151515);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 640px) {
+  .card-actions {
+    flex-direction: column;
+  }
 }
 
 h2 {
